@@ -1,36 +1,39 @@
 from datetime import date
-class Student:
-    def __init__(self,id,name,dob,classification):
-        self.__studentid = "id"
-        self.__name = name
-        self.dob = dob
-        self.age = 0
-        self.register = ""
 
+class Student:
+    def __init__(self,studentid,name,dob,classification):
+        self.__studentid = studentid
+        self.__name = name
+        self.__dob = dob
+        self.__classification = "Class"
+        
+        self.__age = 0
+        self.__register = ""
 
 # attribute
     def calc_age(self):
         today = date.today()
-        x = self.dob.split("/")
-        x_year = int(dob[2])
-        self.age = today.year - x_year
+
+        dob = self.__dob.split("/")
+        dob_year = int(dob[2])
+        self.__age = today.year - dob_year
 
     def calc_register(self):
-        if self.classification == "senior":
+        if self.__classification == "senior":
             self.register = "4/2 thru 4/3"
-        elif self.classification == "junior":
+        elif self.__classification == "junior":
             self.register = "4/4 thru 4/6"
-        elif self.classification == "soph":
+        elif self.__classification == "soph":
             self.register = "4/6 thru 4/9"
-        elif self.classification == "fresh":
+        elif self.__classification == "fresh":
             self.register = "4/10 thru 4/12"
         else:
             self.register = "class not found"                             #catch all
 
     def get_age(self):
-        return self.age
+        return self.__age
     def get_register(self):
-        return self.register
+        return self.__register
 
 
         # all my code

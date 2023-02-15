@@ -4,7 +4,7 @@ import StudentClass as sc
 studentid = 1001
 name = "jphn"
 dob = "10/11/2001"
-classification = "jr"
+classification = ""
 
 student1 = sc.Student(studentid,name,dob,classification)
 
