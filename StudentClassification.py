@@ -2,7 +2,7 @@ import StudentClass as sc
 
 
 studentid = 1001
-name = "jphn"
+name = "john"
 dob = "10/11/2001"
 classification = ""
 
